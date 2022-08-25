@@ -1,4 +1,3 @@
-import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import {  StyleSheet, Text, TextInput, View ,Button} from 'react-native';
 
@@ -19,10 +18,11 @@ export default function AddTodoItem({submitHandler}){
             
             </TextInput>
 
-            <Button> 
-                onPress{()=>submitHandler(text)},
-                text="Add Todo",
+            <Button 
+                onPress= {()=>submitHandler(text)}
+                title ='Add Todo'
                 color='coral'
+                >
             </Button>
         </View>
     )
@@ -33,7 +33,10 @@ const styles = StyleSheet.create(
     {
         inputView:{
             marginBottom:10,
-            paddingHorizontal:8
+            paddingHorizontal:8,
+            paddingVertical:5,
+            borderColor:'coral',
+            borderRadius:5
         }
     }
 )
