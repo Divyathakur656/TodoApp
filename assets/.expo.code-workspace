@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "..\\.expo"
+		},
+		{
+			"path": "..\\.expo-shared"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\node_modules"
+		}
+	]
+}
