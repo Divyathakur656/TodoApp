@@ -9,12 +9,10 @@ import Sandbox from './components/sandbox';
 
 export default function App() {
   const [todos, setTodos] = useState([
-    { text: "Divya", key: 1 },
-    { text: "Payal", key: 2 },
-    { text: "Nishant", key: 3 },
-    { text: "Ankit", key: 4 },
-    { text: "Akriti", key: 5 },
-  ]);
+    { text: "Create an app", key: 1 },
+    { text: "Study time", key: 2 },
+    { text: "Go for excercise", key: 3 },
+      ]);
 
   const pressHandler = (key) => {
     setTodos((previousTodos) => {
