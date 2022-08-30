@@ -1,29 +1,37 @@
-import { useState } from 'react';
-import {  StyleSheet, Text, TextInput, View ,Button} from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Text, TextInput, View, Button, TouchableWithoutFeedback, Pressable } from 'react-native';
 
-export default function AddTodoItem({submitHandler}){
-    const[text,setText]= useState('');
+export default function AddTodoItem({ submitHandler }) {
+    const [text, setText] = useState('');
 
-    const changeHandler = (val) =>{
+    const changeHandler = (val) => {
         setText(val);
     }
 
-    return(
+    return (
 
         <View>
             <TextInput
-            placeholder='Type here something..'
-            style= {styles.inputView}
-            onChangeText = {changeHandler}>
-            
+                placeholder='Type something here..'
+                style={styles.inputView}
+                onChangeText={changeHandler}>
+
             </TextInput>
 
-            <Button 
-                onPress= {()=>submitHandler(text)}
-                title ='Add Todo'
-                color='coral'
-                >
-            </Button>
+            <Pressable
+                style={styles.buttonStyle}
+                onPress={() => submitHandler(text,)
+                
+                }>
+                <Text style={
+                    styles.textStyle
+                }>
+                    Add Todo
+                </Text>
+
+
+
+            </Pressable>
         </View>
     )
 
@@ -31,12 +39,30 @@ export default function AddTodoItem({submitHandler}){
 
 const styles = StyleSheet.create(
     {
-        inputView:{
-            marginBottom:10,
-            paddingHorizontal:8,
-            paddingVertical:5,
-            borderColor:'coral',
-            borderRadius:5
+        inputView: {
+            marginBottom: 30,
+            marginTop: 15,
+            paddingHorizontal: 8,
+
+            paddingVertical: 15,
+            borderColor: 'coral',
+            borderRadius: 6,
+            borderStyle: 'dashed',
+            borderWidth: 1
+        },
+        buttonStyle: {
+            padding: 12,
+            color: "white",
+            alignItems: 'center',
+            borderRadius: 10,
+            elevation: 13,
+            backgroundColor: 'coral',
+
+
+        },
+        textStyle: {
+            color: "white",
+            fontSize: 15
         }
     }
 )
